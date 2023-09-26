@@ -2,6 +2,12 @@ const { DataTypes } = require('sequelize');
 const db = require('../utils/database'); 
 
 const Documents = db.define('Documents', {
+  id: {
+    type: DataTypes.INTEGER,
+    primaryKey:true,
+    autoIncrement: true,
+    allowNull: false
+ },
   nombre: {
     type: DataTypes.STRING,
     allowNull: false,

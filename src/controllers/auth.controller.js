@@ -1,5 +1,4 @@
-// const AuthServices = require("../services/auth.service");
-const DoctorServices = require("../services/doctor.services");
+   const DoctorServices = require("../services/doctor.services");
 const bcrypt = require('bcrypt')
 
 

@@ -7,9 +7,8 @@ const PatientsRoutes = require('./routes/patients.routes')
 const NutritionPlanRoutes = require ('./routes/nutritionPlan.routes');
 const MessureRoutes = require ('./routes/messures.routes');
 const Documents = require ('./models/documents.model');
-const AuthRoutes = require('./routes/auth.route')
 const initModels = require('./models/initModels');
-initModels();     
+// const AuthRoutes = require('./routes/auth.route')
 
 const app = express();
 app.use(cors());
@@ -24,9 +23,11 @@ db.authenticate()
     console.log(error);
 });
 
+initModels();        
  
 db.sync()
-// db.sync({ force: true})  
+// db.sync({ force: true})         
+db.sync({ force: false})        
 // db.sync({ alter: true}) 
 
  .then(() => {
@@ -43,9 +44,9 @@ app.use(PatientsRoutes);
 app.use(NutritionPlanRoutes);
 app.use(MessureRoutes);
 app.use(Documents);
-app.use(AuthRoutes);
+// app.use(AuthRoutes);
 
-app.get('/', (req,res) => {
+app.get('/', (req,res) => { 
     res.send('welcome to my API');
 });
 

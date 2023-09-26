@@ -1,4 +1,4 @@
-const Doctors = require('../models/doctor.model')
+const Doctors = require('../models/doctor.model');
 
 
 class DoctorServices {
