@@ -30,21 +30,6 @@ class DoctorServices {
         }
     }
 
-    // static async updateUserData(userData){
-    //     try {
-    //         const {id, userInfo} = userData
-    //         console.log(userData);
-    //         const updateUser = await Users.update(userInfo, {
-    //             where:{id}
-    //         });
-            
-    //         console.log(updateUser);
-    //         return updateUser
-    //     } catch (error) {
-    //         throw(error)
-    //     }
-    // }
-
     static async getDoctor(username){
         try {
             const doctor = await Doctors.findOne({
@@ -58,3 +43,8 @@ class DoctorServices {
 }
 
 module.exports = DoctorServices;
+
+
+
+
+    
