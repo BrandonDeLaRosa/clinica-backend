@@ -27,7 +27,7 @@ initModels();
  
 db.sync()
 // db.sync({ force: true})         
-db.sync({ force: false})        
+db.sync({ force: false})         
 // db.sync({ alter: true}) 
 
  .then(() => {

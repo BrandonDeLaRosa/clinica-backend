@@ -12,3 +12,4 @@ router.get ('/api/v1/doctor/:id', getDoctor);
 router.post('/api/v1/auth/login', doctorLogin);
 
 module.exports = router;
+
